@@ -1,0 +1,12 @@
+.sec3 {
+    .card {
+        border-radius: 30px;
+        box-shadow: 1px 1px 15px rgba(119, 119, 119, 0.25);
+        padding: 19px;
+        .card-image {
+            img {
+                border-radius: 30px;
+            }
+        }
+    }
+}

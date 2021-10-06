@@ -1,0 +1,50 @@
+.hero {
+    background-image: url(../public/images/hero_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 95px 0 115px 0;
+    background-position: center bottom;
+    &.is-primary {
+        background-color: transparent;
+    }
+    .hero-body {
+        @include from(769px) {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+}
+
+.queryform {
+    .form-field {
+        width: 100%;
+        input {
+            background-color: transparent;
+            color: $white;
+            border-color: $white;
+            border-width: 0.25rem;
+            border-radius: 5px;
+            @include from(769px) {
+                height: 4.6875rem;
+                max-width: 18.6875rem;
+            }
+            &:hover, 
+            &:focus, 
+            &:active {
+                border-color: $white;
+                box-shadow: none;
+            }
+        }
+        .button {
+            left: -10px;
+            @include from(769px) {
+                height: 4.6875rem;
+                max-width: 23rem;
+                left: -50px;
+            }
+            width: 100%;
+            
+
+        }
+    }
+}

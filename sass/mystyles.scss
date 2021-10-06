@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap');
+
+
+// Set your brand colors
+$theme-color: #1ACEDF;
+$black: #000;
+$black-secondary:#3F3F3F;
+$white:#fff;
+$blue: #2565AE;
+$custom-width:1536px;
+$hover-border-bottom-width:7px;
+
+// Update Bulma's global variables
+$family-sans-serif: 'Montserrat', sans-serif;
+$navbar-item-hover-color:$theme-color;
+$navbar-tab-hover-border-bottom-color:$theme-color;
+$navbar-tab-active-border-bottom-width:$hover-border-bottom-width;
+// $grey-dark: $brown;
+// $grey-light: $beige-light;
+$primary: $theme-color;
+$link: $blue;
+// $footer-background-color:$theme-color;
+$container-max-width:$custom-width;
+// $widescreen-enabled: false;
+// $fullhd-enabled: false;
+
+@import "../node_modules/bulma/bulma.sass";
+@import "./partials/common";
+@import "./partials/hero";
+@import "./partials/cards";
+@import "./partials/footer";
+
+.navbar-item {
+    &.is-tab {
+        border-bottom-width: $hover-border-bottom-width;
+        border-radius: 3px;
+    }
+}
+
+.btn-wrap {
+    .button {
+        &:not(last-hild) {
+            border-color: $theme-color;
+            border-width: 2.5px;
+            border-radius: 5px;
+        }
+    }
+}
+
+.more-act-wrap {
+    .button {
+        @include until (768px) {
+            width: 100%;
+        }
+    }
+}
